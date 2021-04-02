@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 10px 10px;
+}
+
+.buttonContainer {
+  display: flex;
+}

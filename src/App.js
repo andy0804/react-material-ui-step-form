@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import { UserForm } from "./components/UserForm";
+import { Navbar } from "./components/Navbar";
 
 function App() {
+  const [title, setTitle] = useState("Enter User Details");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar title={title}>
+        <UserForm setTitle={setTitle} />
+      </Navbar>
     </div>
   );
 }
